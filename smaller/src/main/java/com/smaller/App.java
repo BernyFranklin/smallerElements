@@ -7,10 +7,16 @@ package com.smaller;
  *  original array.
  *
  */
+
+ import java.time.format.DateTimeFormatter;
+ import java.time.LocalDateTime;
+
 public class App 
 {
     public static void main( String[] args )
     {
+        // Print banner
+        banner();
         // Initial array
         int[] arr = {4, 0, 8, 6, 3, 0, 9, 5, 8, 8};
         // Empty array for function
@@ -50,5 +56,22 @@ public class App
             newArr[i] = count;
         }
         return newArr;
+    }
+
+    public static void banner() {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println();
+        bigLine();
+        System.out.printf("\nDaily Coding Problem %s\n", dtf.format(now));
+        bigLine();
+        System.out.println();
+
+    }
+
+    public static void bigLine() {
+        for (int i = 0; i < 40; i++) {
+            System.out.print("-");
+        }
     }
 }
