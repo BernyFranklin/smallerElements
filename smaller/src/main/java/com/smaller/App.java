@@ -60,10 +60,10 @@ public class App
 
     public static void banner() {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime currentDate = LocalDateTime.now();
         System.out.println();
         bigLine();
-        System.out.printf("\nDaily Coding Problem %s\n", dtf.format(now));
+        System.out.printf("\nDaily Coding Problem %s\n", dtf.format(currentDate));
         bigLine();
         System.out.println();
 
